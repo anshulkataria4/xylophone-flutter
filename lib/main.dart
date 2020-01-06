@@ -8,6 +8,16 @@ class XylophoneApp extends StatelessWidget {
     final player = AudioCache();
     player.play('note$soundNumber.wav');
   }
+  Widget buildKey(int soundNumber,Color col){
+    return Expanded(
+      child: RaisedButton(
+        color: col,
+        onPressed: () {
+          playSound(soundNumber);
+        },
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,62 +26,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
-                child: RaisedButton(
-                  color: Colors.red,
-                    onPressed: () {
-                      playSound(1);
-                    },
-                ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.orange,
-                    onPressed: () {
-                      playSound(2);
-                    },
-                ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.yellow,
-                    onPressed: () {
-                      playSound(3);
-                    },
-                   ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.green,
-                    onPressed: () {
-                      playSound(4);
-                    },
-                    ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.blueGrey,
-                    onPressed: () {
-                      playSound(5);
-                    },
-                    ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.blue,
-                    onPressed: () {
-                      playSound(6);
-                    },
-                   ),
-              ),
-              Expanded(
-                child: RaisedButton(
-                    color: Colors.purple,
-                    onPressed: () {
-                      playSound(7);
-                    },
-                    ),
-              ),
+              buildKey(1,Colors.red),
+              buildKey(2,Colors.orange),
+              buildKey(3,Colors.yellow),
+              buildKey(4,Colors.green),
+              buildKey(5,Colors.teal),
+              buildKey(6,Colors.blue),
+              buildKey(7,Colors.purple),
             ],
           ),
         ),
