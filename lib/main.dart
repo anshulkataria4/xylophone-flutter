@@ -8,7 +8,7 @@ class XylophoneApp extends StatelessWidget {
     final player = AudioCache();
     player.play('note$soundNumber.wav');
   }
-  Widget buildKey(int soundNumber,Color col){
+  Expanded buildKey(int soundNumber,Color col){
     return Expanded(
       child: RaisedButton(
         color: col,
