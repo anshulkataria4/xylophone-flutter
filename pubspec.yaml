@@ -24,3 +24,6 @@ flutter:
   assets:
     - assets/
 
+module:
+  androidX: true
+
