@@ -12,62 +12,67 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Xylophone'),
-          centerTitle: true,
-          backgroundColor: Colors.redAccent[400],
-        ),
         body: SafeArea(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 80,
-                ),
-                RaisedButton(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: RaisedButton(
                   color: Colors.red,
                     onPressed: () {
                       playSound(1);
                     },
-                    child: Text('Play Note 1')),
-                RaisedButton(
+                ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.orange,
                     onPressed: () {
                       playSound(2);
                     },
-                    child: Text('Play Note 2')),
-                RaisedButton(
+                ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.yellow,
                     onPressed: () {
                       playSound(3);
                     },
-                    child: Text('Play Note 3')),
-                RaisedButton(
+                   ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.green,
                     onPressed: () {
                       playSound(4);
                     },
-                    child: Text('Play Note 4')),
-                RaisedButton(
+                    ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.blueGrey,
                     onPressed: () {
                       playSound(5);
                     },
-                    child: Text('Play Note 5')),
-                RaisedButton(
+                    ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.blue,
                     onPressed: () {
                       playSound(6);
                     },
-                    child: Text('Play Note 6')),
-                RaisedButton(
+                   ),
+              ),
+              Expanded(
+                child: RaisedButton(
                     color: Colors.purple,
                     onPressed: () {
                       playSound(7);
                     },
-                    child: Text('Play Note 7')),
-              ],
-            ),
+                    ),
+              ),
+            ],
           ),
         ),
       ),
